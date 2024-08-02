@@ -23,7 +23,7 @@ export default function About() {
         Amen
         </p>
 
-        <img src={PictureAlbum} alt="album pictures" className="w-3/5 mx-auto"/>
+        <img src={PictureAlbum} alt="album pictures" className=" w-5/6 lg:w-3/5 mx-auto"/>
         <img src={Grey} className='w-44 absolute top-1/2 left-0'/>
     </div>
   )

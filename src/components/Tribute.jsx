@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+"use client"
+
+import React, { useState, useRef } from 'react'
 import BabaGrey from "../assets/img/babaGrey.png"
+import Modal from './Modal'
 
 
 export default function Tribute() {
-    const[tribute, SetTribute] = useState([
+    const [modalOpen, setModalOpen] = useState(false)
+    const[tribute, setTribute] = useState([
         {
             name: "Chinwe Nwoke",
             description: "Dearest Emmanuel \n So sad you're no more, but God knows best, as He gives and takes. Will be there for Amanda & Osi. May God preserve you in His eternal life till we meet again, a precious friend and sister. Love you loads.God's comfort of love to your lovely family and friends.... read more",
@@ -26,7 +30,22 @@ export default function Tribute() {
         },
     ])
   return (
-    <div className='w-full h-full bg-orange-50 px-10 py-5'>
+    <>
+        {modalOpen && 
+            <div className=' fixed top-0 w-full h-screen backdrop-blur-lg flex justify-center items-center z-50'>
+            <div className='w-4/5 lg:w-1/2 h-auto lg:h-3/4 rounded-2xl bg-white p-7'>
+              <p className='cursor-pointer font-semibold text-customBrown text-2xl text-right' onClick={()=>{setModalOpen(false)}}>&times;</p>
+              <p className='font-serif text-2xl m-3 text-customBrown'>Leave your Tribute</p>
+              <form action="">
+                <input type="text" id='name' name='name' placeholder='FULL NAME' className=' w-full mt-5 mx-auto block outline-none border-customGold border-2 rounded-xl p-2 text-sm' />
+                <textarea name="tribute" rows="5" cols={"50"}  id="Tribute" placeholder='ADD YOUR TRIBUTE TEXT HERE' className='mt-5 mx-auto w-full block outline-none p-2 border-customGold border-2 rounded-xl text-sm'></textarea>
+                <button className=' p-3 bg-customGold rounded-full text-white text-xs mt-4 font-medium'>
+                  PUBLISH TRIBUTE</button>
+              </form>
+            </div> 
+          </div>
+        }
+        <div className='w-full h-full bg-orange-50 px-10 py-5'>
         <p className='font-serif text-2xl lg:text-4xl text-customBrown text-center'>
             SEND YOUR TRIBUTES
         </p>
@@ -34,13 +53,17 @@ export default function Tribute() {
             <div className='w-full h-full lg:w-2/3 mr-0 lg:mr-4 px-2 lg:overflow-x-hidden lg:overflow-scroll'>
                 {tribute.map(data => {
                     return(
-                        <div className='border-2 border-customGold my-3 rounded-2xl px-10 p-4 bg-white'>
-                            <h2 className='text-customBrown text-lg font-semibold'>{data.name}</h2>
-                            <p></p>
-                            <p className='text-xs leading-6 mt-2 opacity-40'>{data.description}</p>
-                        </div>
+                        <>
+                            <div className='border-2 border-customGold my-3 rounded-2xl px-10 p-4 bg-white'>
+                                <h2 className='text-customBrown text-lg font-semibold'>{data.name}</h2>
+                                <p></p>
+                                <p className='text-xs leading-6 mt-2 opacity-40'>{data.description}</p>
+                            </div>
+                        </>
                     )
                 })}
+                <button className=' p-3 bg-customGold text-white rounded-full text-sm block my-4 mx-auto'>LOAD MORE</button>
+
             </div>
             <div className='w-full lg:w-1/4 bg-orange-200 ml-0 lg:ml-4 rounded-lg text-customBrown font-serif p-5 relative'>
                 <p className='text-sm'>
@@ -72,10 +95,14 @@ export default function Tribute() {
                 Arochukwu, Abia State, Nigeria <br />
                 11:00 AM
                 </p>
-                <img src={BabaGrey} className='absolute right-0 bottom-3 w-5/6 scale-x-[-1]' />
-                <a href="" className=' h-10 rounded-full bg-customGold text-white text-xs font-sans p-4 '>SEND YOUR TRIBUTE</a>
+                <img src={BabaGrey} className='absolute right-0 bottom-20 w-5/6 scale-x-[-1]' />
+                <button onClick={()=>{setModalOpen(true)}} className='rounded-full bg-customGold text-white text-xs block mx-auto font-sans p-4 '>SEND YOUR TRIBUTE</button>
+
+
             </div>
         </div>
+        
     </div>
+    </>
   )
 }

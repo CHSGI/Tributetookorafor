@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Tribute from "./components/Tribute";
 
 function App() {
+
   return (
     <>
     <NavBar />

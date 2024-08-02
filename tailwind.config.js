@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Futura', 'sans-serif']
+      },
+      colors: {
+        customGold: '#bf8c2f',
+        customBrown: '#4F3403'
+      },
+    },
   },
   plugins: [],
 }

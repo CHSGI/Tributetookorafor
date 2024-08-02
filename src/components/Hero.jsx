@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
     }
     <div
-      className="relative h-screen"
+      className="relative h-auto pt-20 "
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
@@ -31,7 +31,7 @@ const Hero = () => {
       }}
     >
 
-      <div className="relative flex items-center sm:items-end h-full px-6 isolate lg:px-8">
+      <div className="relative flex flex-col lg:flex-row items-center sm:items-end h-full px-6 isolate lg:px-8">
         <div className="max-w-2xl text-center md:mb-24">
           <h1 className="text-4xl font-bold tracking-tight text-customBrown sm:text-6xl">
             Tribute to
@@ -53,8 +53,8 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-lg">
-          <img src={flower} className="absolute top-30 right-28 w-1/2 -z-10" />
+        <div className="max-w-lg mt-6 lg:mt-0">
+          <img src={flower} className="absolute top-30 right-5 lg:right-28 w-8/10 lg:w-1/2 -z-10" />
           <img src={baba} alt="Background" className="object-cover w-full h-full " />
         </div>
       </div>

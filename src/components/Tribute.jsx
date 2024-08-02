@@ -51,12 +51,12 @@ export default function Tribute() {
         <p className='font-serif text-2xl lg:text-4xl text-customBrown text-center'>
             SEND YOUR TRIBUTES
         </p>
-        <div className='h-full lg:h-screen flex flex-col lg:flex-row justify-between px-20 mt-5'>
+        <div className='h-full lg:h-screen flex flex-col lg:flex-row justify-between px-0 lg:px-20 mt-5'>
             <div className='w-full h-full lg:w-2/3 mr-0 lg:mr-4 px-2 lg:overflow-x-hidden lg:overflow-scroll'>
                 {tribute.map(data => {
                     return(
                         <>
-                            <div className='border-2 border-customGold my-3 rounded-2xl px-10 p-4 bg-white'>
+                            <div className='border-2 border-customGold my-3 rounded-2xl px-5 lg:px-10 p-4 bg-white'>
                                 <h2 className='text-customBrown text-lg font-semibold'>{data.name}</h2>
                                 <p></p>
                                 <p className='text-xs leading-6 mt-2 opacity-40'>{data.description}</p>

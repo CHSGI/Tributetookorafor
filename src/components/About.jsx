@@ -7,8 +7,8 @@ import Grey from "../assets/img/babaGrey.png"
 export default function About() {
   return (
     <div className='w-full h-full p-10 relative bg-white'>
-        <p className=' text-customBrown font-serif text-center text-2xl'>
-        <span className='text-lg'>ABOUT</span> <br />
+        <p className=' text-customBrown font-serif text-center text-lg lg:text-2xl'>
+        <span className='text-md'>ABOUT</span> <br />
         EMMANUEL OKORAFOR
         </p>
         <p className=' text-xs font-serif text-center mt-4'>

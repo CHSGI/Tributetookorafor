@@ -1,5 +1,6 @@
 import bgImage from "../assets/img/bg.png";
 import baba from "../assets/img/baba.png"
+import flower from "../assets/img/flower.png"
 
 const Hero = () => {
   return (
@@ -32,6 +33,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="max-w-lg">
+          <img src={flower} className="absolute top-30 right-28 w-1/2 -z-10" />
           <img src={baba} alt="Background" className="object-cover w-full h-full " />
         </div>
       </div>

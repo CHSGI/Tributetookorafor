@@ -36,15 +36,14 @@ const NavBar = () => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-purple-dark">
+                <a key={item.name} href={item.href} className="text-xs font-semibold leading-6 text-purple-dark hover:opacity-40 duration-500">
                   {item.name}
                 </a>
               )
             )}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          
-            <a href="/signup" className="px-2.5 py-2 text-sm font-semibold leading-6 border-blue-200 text-purple-dark hover:text-black hover:bg-purple-dark">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end text-xs">
+            <a href="/signup" className=" p-2 font-semibold leading-6 text-purple-dark hover:text-black hover:bg-purple-dark">
               SHARE 
             </a>
           </div>

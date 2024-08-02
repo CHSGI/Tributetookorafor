@@ -1,8 +1,5 @@
-"use client"
-
 import React, { useState, useRef } from 'react'
 import BabaGrey from "../assets/img/babaGrey.png"
-import Modal from './Modal'
 
 
 export default function Tribute() {

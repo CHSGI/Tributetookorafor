@@ -17,14 +17,14 @@ const Hero = () => {
           <h1 className="text-4xl font-bold tracking-tight text-customBrown sm:text-6xl">
             Tribute to
           </h1>
-          <p className="text-customBrown leading-8 text-lg">PHARM. DEACON</p>
-          <h1 className="text-4xl tracking-tight text-customBrown sm:text-6xl">
+          <p className="text-customBrown font-serif leading-8 text-lg">PHARM. DEACON</p>
+          <h1 className="text-3xl font-serif font-extralight tracking-tight text-customBrown sm:text-6xl">
             EMMANUEL OKORAFOR
           </h1>
           <div className="flex items-center justify-center mt-10 gap-x-6">
             <a
               href="#"
-              className="px-4 py-3 text-sm font-semibold text-white bg-customGold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="px-4 py-3 text-sm font-light text-white bg-customGold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               style={{ borderRadius: "20px" }}
             >
               SEND YOUR TRIBUTE

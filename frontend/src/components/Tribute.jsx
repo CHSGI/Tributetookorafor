@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ShareButtons from './ShareButtons';
 import BabaGrey from "../assets/img/babaGrey.png";
 
 export default function Tribute() {
@@ -101,17 +102,18 @@ export default function Tribute() {
           <div className="w-full h-full px-2 mr-0 lg:w-2/3 lg:mr-4 lg:overflow-x-hidden lg:overflow-scroll">
             {tributes.map((data) => {
               return (
-                <>
-                  <div className="p-4 px-5 my-3 bg-white border-2 border-customGold rounded-2xl lg:px-10">
-                    <h2 className="text-lg font-semibold text-customBrown">
-                      {data.name}
-                    </h2>
-                    <p></p>
-                    <p className="mt-2 text-xs leading-6 opacity-40">
-                      {data.description}
-                    </p>
-                  </div>
-                </>
+                <div
+                  key={data.id}
+                  className="p-4 px-5 my-3 bg-white border-2 border-customGold rounded-2xl lg:px-10"
+                >
+                  <h2 className="text-lg font-semibold text-customBrown">
+                    {data.name}
+                  </h2>
+                  <p className="mt-2 text-xs leading-6 opacity-40">
+                    {data.description}
+                  </p>
+                  <ShareButtons tribute={data} />
+                </div>
               );
             })}
 

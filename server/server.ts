@@ -25,7 +25,14 @@ app.use(express.json());
 
 app.get('/tributes', async (req, res) => {
   try {
-    const tributes = await prisma.tribute.findMany();
+    const tributes = await prisma.tribute.findMany({
+      select: {
+        id: true,
+        name: true,
+        description: true,
+        createdAt: true
+      }
+    });
     res.json(tributes);
   } catch (error) {
     res.status(500).json({ error: 'Error fetching tributes' });

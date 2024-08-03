@@ -98,7 +98,7 @@ export default function Tribute() {
         <p className="font-serif text-2xl text-center lg:text-4xl text-customBrown">
           SEND YOUR TRIBUTES
         </p>
-        <div className="flex flex-col justify-between h-full px-0 mt-5 lg:h-screen lg:flex-row lg:px-20">
+        <div className="flex flex-col justify-between h-full px-0 mt-5 lg:h-screen lg:flex-row lg:px-20" id='tributes'>
           <div className="w-full h-full px-2 mr-0 lg:w-2/3 lg:mr-4 lg:overflow-x-hidden lg:overflow-scroll">
             {tributes.map((data) => {
               return (

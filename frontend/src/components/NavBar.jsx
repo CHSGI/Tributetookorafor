@@ -5,8 +5,8 @@ import { WhatsappShareButton } from "react-share";
 
 const navigation = [
   { name: 'HOME', href: '/' },
-  { name: 'BIOGRAPHY', href: '#' },
-  { name: 'TRIBUTES', href: '#' },
+  { name: 'BIOGRAPHY', href: '#about' },
+  { name: 'TRIBUTES', href: '#tributes' },
 ]
 
 const NavBar = () => {
@@ -37,16 +37,16 @@ const NavBar = () => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="text-xs font-semibold leading-6 text-purple-dark hover:opacity-40 duration-500">
+                <a key={item.name} href={item.href} className="text-xs font-semibold leading-6 duration-500 text-purple-dark hover:opacity-40">
                   {item.name}
                 </a>
               )
             )}
           </div>
           
-          <WhatsappShareButton url='https://tributetookorafor.com/' className="lg:flex flex-row items-center lg:flex-1 lg:justify-end text-xs">
-              <i className='bx bxs-share-alt text-lg hidden lg:block'></i>
-              <a href="/signup" className=" p-2 font-semibold leading-6 text-purple-dark hover:text-black hover:bg-purple-dark">
+          <WhatsappShareButton url='https://tributetookorafor.com/' className="flex-row items-center text-xs lg:flex lg:flex-1 lg:justify-end">
+              <i className='hidden text-lg bx bxs-share-alt lg:block'></i>
+              <a href="#" className="p-2 font-semibold leading-6 text-purple-dark hover:text-black hover:bg-purple-dark">
                 SHARE 
               </a>
           </WhatsappShareButton>

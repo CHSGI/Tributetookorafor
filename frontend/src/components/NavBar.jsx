@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { WhatsappShareButton } from "react-share";
 
 const navigation = [
   { name: 'HOME', href: '/' },
@@ -42,11 +43,15 @@ const NavBar = () => {
               )
             )}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end text-xs">
-            <a href="/signup" className=" p-2 font-semibold leading-6 text-purple-dark hover:text-black hover:bg-purple-dark">
-              SHARE 
-            </a>
-          </div>
+          
+          <WhatsappShareButton url='https://tributetookorafor.com/' className="lg:flex flex-row items-center lg:flex-1 lg:justify-end text-xs">
+              <i className='bx bxs-share-alt text-lg hidden lg:block'></i>
+              <a href="/signup" className=" p-2 font-semibold leading-6 text-purple-dark hover:text-black hover:bg-purple-dark">
+                SHARE 
+              </a>
+          </WhatsappShareButton>
+          
+
         </nav>
         <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />

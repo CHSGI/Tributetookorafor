@@ -9,7 +9,18 @@ const app = express();
 const prisma = new PrismaClient();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+const whitelist = process.env.CORS_WHITELIST ? process.env.CORS_WHITELIST.split(',') : [];
+const corsOptions: cors.CorsOptions = {
+  origin: function (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) {
+    if (!origin || whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get('/tributes', async (req, res) => {

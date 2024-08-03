@@ -47,7 +47,18 @@ dotenv_1.default.config();
 var app = (0, express_1.default)();
 var prisma = new client_1.PrismaClient();
 var port = process.env.PORT || 5000;
-app.use((0, cors_1.default)());
+var whitelist = process.env.CORS_WHITELIST ? process.env.CORS_WHITELIST.split(',') : [];
+var corsOptions = {
+    origin: function (origin, callback) {
+        if (!origin || whitelist.indexOf(origin) !== -1) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
+};
+app.use((0, cors_1.default)(corsOptions));
 app.use(express_1.default.json());
 app.get('/tributes', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var tributes, error_1;

@@ -13,7 +13,9 @@ export default function Tribute() {
 
   const fetchTributes = async () => {
     try {
-      const response = await fetch("http://localhost:5000/tributes");
+      const response = await fetch(
+        "https://tributetookorafor.onrender.com/tributes"
+      );
       const data = await response.json();
       setTributes(data);
     } catch (error) {
@@ -24,13 +26,16 @@ export default function Tribute() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/tributes/add", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, description }),
-      });
+      const response = await fetch(
+        "https://tributetookorafor.onrender.com/tributes/add",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, description }),
+        }
+      );
       if (response.ok) {
         setModalOpen(false);
         fetchTributes();
@@ -94,7 +99,7 @@ export default function Tribute() {
         </p>
         <div className="flex flex-col justify-between h-full px-0 mt-5 lg:h-screen lg:flex-row lg:px-20">
           <div className="w-full h-full px-2 mr-0 lg:w-2/3 lg:mr-4 lg:overflow-x-hidden lg:overflow-scroll">
-          {tributes.map((data) => {
+            {tributes.map((data) => {
               return (
                 <>
                   <div className="p-4 px-5 my-3 bg-white border-2 border-customGold rounded-2xl lg:px-10">

@@ -23,7 +23,7 @@ const ShareButtons = ({ tribute }) => {
       <FacebookShareButton
         url={shareUrl}
         quote={`${title}\n\n${description}`}
-        hashtag={`${title}\n\n${description}\n\n#TributeToOkorafor`}
+        hashtag={`#TributeToOkorafor`}
       >
         <FacebookIcon size={32} round />
       </FacebookShareButton>

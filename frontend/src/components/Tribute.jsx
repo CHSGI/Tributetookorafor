@@ -121,7 +121,7 @@ export default function Tribute() {
             {tributes.length > displayCount && (
               <button 
                 onClick={() => setDisplayCount(tributes.length)}
-                className="block p-3 mx-auto my-4 text-sm text-white rounded-full bg-customGold"
+                className="block p-3 mx-auto my-4 text-sm text-white rounded-full hover:bg-hoverColor bg-customGold"
               >
                 LOAD MORE
               </button>
@@ -167,7 +167,7 @@ export default function Tribute() {
               onClick={() => {
                 setModalOpen(true);
               }}
-              className="block p-4 mx-auto font-sans text-xs text-white rounded-full bg-customGold "
+              className="relative z-10 block p-4 mx-auto font-sans text-xs text-white rounded-full bg-customGold hover:bg-hoverColor"
             >
               SEND YOUR TRIBUTE
             </button>

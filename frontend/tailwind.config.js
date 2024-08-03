@@ -11,7 +11,8 @@ export default {
       },
       colors: {
         customGold: '#bf8c2f',
-        customBrown: '#4F3403'
+        customBrown: '#4F3403',
+        hoverColor: '#a9782b'
       },
     },
   },

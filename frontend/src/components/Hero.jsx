@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
     }
     <div
-      className="relative h-auto pt-20 "
+      className="relative md:h-screen h-auto pt-20 "
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",

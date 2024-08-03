@@ -7,6 +7,7 @@ export default function Tribute() {
   const [tributes, setTributes] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [displayCount, setDisplayCount] = useState(5);
 
   useEffect(() => {
     fetchTributes();
@@ -100,7 +101,7 @@ export default function Tribute() {
         </p>
         <div className="flex flex-col justify-between h-full px-0 mt-5 lg:h-screen lg:flex-row lg:px-20" id='tributes'>
           <div className="w-full h-full px-2 mr-0 lg:w-2/3 lg:mr-4 lg:overflow-x-hidden lg:overflow-scroll">
-            {tributes.map((data) => {
+            {tributes.slice(0, displayCount).map((data) => {
               return (
                 <div
                   key={data.id}
@@ -117,9 +118,14 @@ export default function Tribute() {
               );
             })}
 
-            <button className="block p-3 mx-auto my-4 text-sm text-white rounded-full bg-customGold">
-              LOAD MORE
-            </button>
+            {tributes.length > displayCount && (
+              <button 
+                onClick={() => setDisplayCount(tributes.length)}
+                className="block p-3 mx-auto my-4 text-sm text-white rounded-full bg-customGold"
+              >
+                LOAD MORE
+              </button>
+            )}
           </div>
           <div className="relative w-full p-5 ml-0 font-serif bg-orange-200 rounded-lg lg:w-1/4 lg:ml-4 text-customBrown">
             <p className="text-sm">SERVICE OF SONGS</p>

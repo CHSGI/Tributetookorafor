@@ -9,14 +9,14 @@ const Hero = () => {
   return (
   <>
     {modalOpen && 
-            <div className='fixed top-0 z-50 flex items-center justify-center w-full h-screen  backdrop-blur-lg'>
+            <div className='fixed top-0 z-50 flex items-center justify-center w-full h-screen backdrop-blur-lg'>
             <div className='w-4/5 h-auto bg-white lg:w-1/2 lg:h-3/4 rounded-2xl p-7'>
               <p className='text-2xl font-semibold text-right cursor-pointer text-customBrown' onClick={()=>{setModalOpen(false)}}>&times;</p>
               <p className='m-3 font-serif text-2xl text-customBrown'>Leave your Tribute</p>
               <form action="">
-                <input type="text" id='name' name='name' placeholder='FULL NAME' className='block w-full p-2 mx-auto mt-5 text-sm border-2 outline-none  border-customGold rounded-xl' />
+                <input type="text" id='name' name='name' placeholder='FULL NAME' className='block w-full p-2 mx-auto mt-5 text-sm border-2 outline-none border-customGold rounded-xl' />
                 <textarea name="tribute" rows="5" cols={"50"}  id="Tribute" placeholder='ADD YOUR TRIBUTE TEXT HERE' className='block w-full p-2 mx-auto mt-5 text-sm border-2 outline-none border-customGold rounded-xl'></textarea>
-                <button className='p-3 mt-4 text-xs font-medium text-white rounded-full  bg-customGold'>
+                <button className='p-3 mt-4 text-xs font-medium text-white rounded-full hover:bg-hoverColor bg-customGold'>
                   PUBLISH TRIBUTE</button>
               </form>
             </div> 

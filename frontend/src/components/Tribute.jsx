@@ -87,7 +87,7 @@ export default function Tribute() {
               ></textarea>
               <button
                 type="submit"
-                className="p-3 mt-4 text-xs font-medium text-white rounded-full bg-customGold"
+                className="p-3 mt-4 text-xs font-medium text-white rounded-full hover:bg-hoverColor bg-customGold"
               >
                 PUBLISH TRIBUTE
               </button>

@@ -31,17 +31,17 @@ const Hero = () => {
       }}
     >
 
-      <div className="relative flex flex-col items-center h-full px-6 lg:flex-row sm:items-end isolate lg:px-8">
-        <div className="max-w-2xl text-center md:mb-24">
+      <div className="relative w-full flex flex-col items-center justify-around h-full px-6 lg:flex-row sm:items-end isolate lg:px-8">
+        <div className="max-w-2xl text-center md:mb-24 space-y-3">
           <h1 className="text-4xl font-bold tracking-tight text-customBrown sm:text-6xl">
             Tribute to
           </h1>
-          <p className="font-serif text-lg leading-8 text-customBrown">PHARM. DEACON</p>
-          <h1 className="font-serif text-3xl tracking-tight font-extralight text-customBrown sm:text-6xl">
-            EMMANUEL OKORAFOR
+          {/* <p className="font-serif text-lg leading-8 text-customBrown">Pa.</p> */}
+          <h1 className="font-serif text-3xl tracking-tight font-extralight text-customBrown lg:w-2/3 mx-auto lg:text-5xl">
+            Rev Canon Felix Edematie Agbroko
           </h1>
-          <p className="font-serif text-xs text-customBrown">
-            16 JUNE 1957 - 15 JUNE 2024</p>
+          {/* <p className="font-serif text-xs text-customBrown">
+            16 JUNE 1957 - 15 JUNE 2024</p> */}
           <div className="flex items-center justify-center mt-10 gap-x-6">
             <a
               href="#"
@@ -54,8 +54,8 @@ const Hero = () => {
           </div>
         </div>
         <div className="max-w-lg mt-6 lg:mt-0">
-          <img src={flower} className="absolute top-30 right-5 lg:right-28 w-8/10 lg:w-1/2 -z-10" />
-          <img src={baba} alt="Background" className="object-cover w-full h-full " />
+          <img src={flower} className="absolute top-30 right-5 lg:right-5 w-8/10 lg:w-1/2 -z-10" />
+          <img src={baba} alt="Background" className="object-cover w-full h-full" />
         </div>
       </div>
     </div>

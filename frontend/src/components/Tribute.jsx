@@ -95,13 +95,13 @@ export default function Tribute() {
           </div>
         </div>
       )}
-      <div className="w-full h-full px-10 py-5 bg-orange-50">
+      <div className="w-full h-auto px-10 py-5 bg-orange-50">
         <p className="font-serif text-2xl text-center lg:text-4xl text-customBrown">
           SEND YOUR TRIBUTES
         </p>
-        <div className="flex flex-col justify-between h-full px-0 mt-5 lg:h-screen lg:flex-row lg:px-20" id='tributes'>
+        <div className="flex flex-col justify-between h-full px-0 mt-5 lg:max-h-screen h-auto lg:flex-row lg:px-20" id='tributes'>
           <div className="w-full h-full px-2 mr-0 lg:w-2/3 lg:mr-4 lg:overflow-x-hidden lg:overflow-scroll">
-            {tributes.slice(0, displayCount).map((data) => {
+            {/* {tributes.slice(0, displayCount).map((data) => {
               return (
                 <div
                   key={data.id}
@@ -116,19 +116,19 @@ export default function Tribute() {
                   <ShareButtons tribute={data} />
                 </div>
               );
-            })}
+            })} */}
 
-            {tributes.length > displayCount && (
+            {/* {tributes.length > displayCount && (
               <button 
                 onClick={() => setDisplayCount(tributes.length)}
                 className="block p-3 mx-auto my-4 text-sm text-white rounded-full hover:bg-hoverColor bg-customGold"
               >
                 LOAD MORE
               </button>
-            )}
+            )} */}
           </div>
           <div className="relative w-full p-5 ml-0 font-serif bg-orange-200 rounded-lg lg:w-1/4 lg:ml-4 text-customBrown">
-            <p className="text-sm">SERVICE OF SONGS</p>
+            {/* <p className="text-sm">SERVICE OF SONGS</p>
             <p className="mt-2 text-xs leading-6">
               <span className="font-semibold">3 August 2024</span> <br />
               HIS RESIDENCE <br />
@@ -149,19 +149,19 @@ export default function Tribute() {
               322 Road, E Close Roundabout <br />
               Festac Town, Lagos, Nigeria <br />
               5:00 PM - 7:00 PM
-            </p>
+            </p> */}
             <p className="my-4">FUNERAL SERVICE</p>
             <p className="mb-6 text-xs leading-6 ">
               <span className="font-semibold">
-                22 August 2024 <br />
+                June 27th 2025<br />
               </span>
               UGO VILLAGE SQUARE <br />
-              Arochukwu, Abia State, Nigeria <br />
-              11:00 AM
+              Delta state, Nigeria <br />
+              {/* 11:00 AM */}
             </p>
             <img
               src={BabaGrey}
-              className="absolute right-0 bottom-20 w-5/6 scale-x-[-1]"
+              className="absolute opacity-10 w-2/3 mx-auto right-0 bottom-0 scale-x-[1]"
             />
             <button
               onClick={() => {
